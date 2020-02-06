@@ -1,0 +1,36 @@
+@import './normalize.scss';
+
+// Didot
+@font-face {
+  font-family: Didot-Bold;
+  src: url('./fonts/Didot-HTF-B42-Bold.ttf');
+  font-weight: normal; 
+}
+
+@font-face {
+  font-family: Didot-Med;
+  src: url('./fonts/Didot-HTF-M42-Medium.ttf');
+  font-weight: normal; 
+}
+
+@font-face {
+  font-family: Didot-Light;
+  src: url('./fonts/Didot-HTF-L42-Light.ttf');
+  font-weight: normal; 
+}
+
+* {
+  font-family: Didot-Bold;
+}
+
+body {
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px;
+}

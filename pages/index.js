@@ -1,12 +1,11 @@
 import NavigationBar from '../components/navigation/navigation-bar.js'
+import Jumbotron from '../components/jumbotron/jumbotron'
 import MainContainer from '../components/containers/main-container'
 const Index = () => {
   return (
     <div>
       <NavigationBar/>
-      <MainContainer>
-        <h1>hello world</h1>
-      </MainContainer>
+      <Jumbotron/>
     </div>
   )
 }

@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import {ButtonGroup} from '@material-ui/core'
 import GeneralButton from '../../buttons/general-button'
 import styles from './navigation-menu.modules.scss'
 

@@ -4,3 +4,51 @@
   padding: 20px;
   box-sizing: border-box;
 }
+
+.grid {
+  display: grid;
+  height: 100%;
+  width: 100%;
+}
+
+.gridTemplateColumns {
+  &1 {
+    grid-template-columns: repeat(1, minmax(auto, 1fr));
+  }
+  &2 {
+    grid-template-columns: repeat(2, minmax(auto, 2fr));
+  }
+  &3 {
+    grid-template-columns: repeat(3, minmax(auto, 3fr));
+  }
+  &4 {
+    grid-template-columns: repeat(4, minmax(auto, 4fr));
+  }
+  &5 {
+    grid-template-columns: repeat(5, minmax(auto, 5fr));
+  }
+  &6 {
+    grid-template-columns: repeat(6, minmax(auto, 6fr));
+  }
+}
+
+.gridTemplateRows {
+  &1 {
+    grid-template-rows: repeat(1, minmax(auto, 1fr));
+  }
+  &2 {
+    grid-template-rows: repeat(2, minmax(auto, 2fr));
+  }
+  &3 {
+    grid-template-rows: repeat(3, minmax(auto, 3fr));
+  }
+  &4 {
+    grid-template-rows: repeat(4, minmax(auto, 4fr));
+  }
+  &5 {
+    grid-template-rows: repeat(5, minmax(auto, 5fr));
+  }
+  &6 {
+    grid-template-rows: repeat(6, minmax(auto, 6fr));
+  }
+}

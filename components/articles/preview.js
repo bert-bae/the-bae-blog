@@ -1,5 +1,4 @@
 import MainContainer from '../containers/main-container'
-import GridContainer from '../containers/grid-container'
 import PreviewCard from './preview-card'
 import styles from './articles.modules.scss'
 

@@ -5,7 +5,7 @@ import styles from './navigation-bar.modules.scss'
 
 const NavigationBar = () => {
   return (
-    <div>
+    <div className={styles.fullBar}>
       <Grid className={styles.navigationBar} container direction="row" justify="space-between" alignItems="center">
         <Link href="/">
           <a>

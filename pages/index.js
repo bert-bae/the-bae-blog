@@ -7,7 +7,32 @@ const Index = () => {
     <>
       <NavigationBar/>
       <Jumbotron/>
-      <ArticlePreview articles={[{title: "Article Title", summary: "Article summary blah blah blah blah blah", imgUrl: "/images/logo.png"}]}/>
+      <ArticlePreview articles={[
+          {
+            title: "Article Title", 
+            summary: "Article summary blah blah blah blah blah", 
+            imgUrl: "/images/logo.png",
+            date: new Date().toDateString()
+          },
+          {
+            title: "Article Title", 
+            summary: "Article summary blah blah blah blah blah", 
+            imgUrl: "/images/logo.png",
+            date: new Date().toDateString()
+          },
+          {
+            title: "Article Title", 
+            summary: "Article summary blah blah blah blah blah", 
+            imgUrl: "/images/logo.png",
+            date: new Date().toDateString()
+          },
+          {
+            title: "Article Title", 
+            summary: "Article summary blah blah blah blah blah", 
+            imgUrl: "/images/logo.png",
+            date: new Date().toDateString()
+          }
+        ]}/>
     </>
   )
 }

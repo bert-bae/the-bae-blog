@@ -1,19 +1,18 @@
-import Link from 'next/link'
 import GeneralButton from '../../buttons/general-button'
+import Router from '../../misc/router'
 import styles from './navigation-menu.modules.scss'
-
 const NavigationMenu = () => {
   return (
     <div className={styles.navigationMenu}>
-      <Link href="/posts">
+      <Router href="/posts">
         <GeneralButton>Posts</GeneralButton>
-      </Link>
-      <Link href="/gifts">
+      </Router>
+      <Router href="/gifts">
         <GeneralButton>Gifts</GeneralButton>
-      </Link>
-      <Link href="/About">
+      </Router>
+      <Router href="/About">
         <GeneralButton>About</GeneralButton>
-      </Link>
+      </Router>
     </div>
   )
 }

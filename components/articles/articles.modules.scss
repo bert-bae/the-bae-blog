@@ -8,3 +8,17 @@
   width: 100%;
   object-fit: contain;
 }
+
+.previewCard {
+  display: grid;
+  min-height: 350px;
+  grid-template-columns: 33% 1fr;
+  grid-template-rows: repeat(1, minmax(auto, 1fr));
+  grid-gap: 50px;
+  padding: 0 0 25px 0;
+}
+
+.dateContainer {
+  margin: 10px 0 0 0;
+  border-top: 5px solid rgba(128, 128, 128, 0.5);
+}

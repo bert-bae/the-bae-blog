@@ -1,25 +1,56 @@
 import {BottomNavigation, BottomNavigationAction} from '@material-ui/core'
+import {withStyles} from '@material-ui/core/styles'
 import {NewReleasesTwoTone, GroupTwoTone, LocalFloristTwoTone, SentimentDissatisfiedTwoTone} from '@material-ui/icons'
 
-const NavigationFooter = ({page, setPage}) => {
+const StyledAction = withStyles(theme => ({
+  root: {
+    "&$selected": {
+      color: "red"
+    }
+  },
+  selected: {}
+}))(BottomNavigationAction);
+
+const NavigationFooter = ({page, setState}) => {
   return (
     <BottomNavigation
       value={page}
       onChange={(event, newValue) => {
-        setPage(newValue);
+        setState.setArticles([
+          // dummy data... this should come from posts
+          {
+            title: `Article Title ${newValue}`, 
+            summary: "Article summary blah blah blah blah blah", 
+            imgUrl: "/images/logo.png",
+            date: new Date().toDateString()
+          },
+          {
+            title: `Article Title ${newValue}`, 
+            summary: "Article summary blah blah blah blah blah", 
+            imgUrl: "/images/logo.png",
+            date: new Date().toDateString()
+          },
+          {
+            title: `Article Title ${newValue}`, 
+            summary: "Article summary blah blah blah blah blah", 
+            imgUrl: "/images/logo.png",
+            date: new Date().toDateString()
+          },
+        ])
+        setState.setPage(newValue)
       }}
       showLabels
     >
-      <BottomNavigationAction label="Latest" value="latest"
+      <StyledAction label="Latest" value="latest"
         icon={<NewReleasesTwoTone/>}
       />
-      <BottomNavigationAction label="Appreciation" value="appreciation"
+      <StyledAction label="Appreciation" value="appreciation"
         icon={<LocalFloristTwoTone/>}
       />
-      <BottomNavigationAction label="Communication" value="communication"
+      <StyledAction label="Communication" value="communication"
         icon={<GroupTwoTone/>}
       />
-      <BottomNavigationAction label="Handling conflicts" value="handling conflicts"
+      <StyledAction label="Handling conflicts" value="handling conflicts"
         icon={<SentimentDissatisfiedTwoTone/>}
       />
     </BottomNavigation>

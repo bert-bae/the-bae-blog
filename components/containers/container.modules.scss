@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+.postContainer {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 .grid {
   display: grid;
   height: 100%;

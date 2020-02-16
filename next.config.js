@@ -4,7 +4,7 @@ const withCSS = require('@zeit/next-css')
 const withFonts = require('nextjs-fonts')
 
 dotenv.config({ path: __dirname + '/.env' })
-module.exports = withCSS(withSass(withFonts({
+module.exports = withSass(withCSS(withFonts({
   cssModules: true,
   env: {
     GHOST_KEY: process.env.GHOST_KEY,

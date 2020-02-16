@@ -9,7 +9,8 @@ module.exports = withCSS(withSass(withFonts({
   env: {
     GHOST_KEY: process.env.GHOST_KEY,
     GHOST_VERSION: process.env.GHOST_VERSION,
-    GHOST_URL: process.env.GHOST_URL
+    GHOST_URL: process.env.GHOST_URL,
+    S3_BUCKET: process.env.S3_BUCKET
   },
   publicRuntimeConfig: false
 })))

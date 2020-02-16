@@ -9,7 +9,7 @@ const NavigationBar = () => {
       <Grid className={styles.navigationBar} container direction="row" justify="space-between" alignItems="center">
         <Link href="/">
           <a>
-            <img src="./images/logocropped.png" className={styles.mainLogo}/>
+            <img src={`${process.env.S3_BUCKET}/images/logocropped.png`} className={styles.mainLogo}/>
           </a>
         </Link>
         <NavigationMenu/>

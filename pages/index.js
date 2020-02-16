@@ -26,9 +26,7 @@ const Index = ({ initialPosts }) => {
 }
 
 Index.getInitialProps = async () => {
-  const posts = await getPosts();
-  console.log(posts)
-  return { initialPosts: posts }
+  return { initialPosts: await getPosts() }
 }
 
 export default Index

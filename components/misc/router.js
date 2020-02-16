@@ -5,7 +5,6 @@ const Router = ({path, query, asPath, children}) => {
   const router = useRouter()
 
   const handleClick = (e) => {
-    console.log(path)
     e.preventDefault()
     router.push({
       pathname: path,

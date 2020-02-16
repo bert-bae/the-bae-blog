@@ -5,16 +5,13 @@ import styles from './navigation-menu.modules.scss'
 const NavigationMenu = () => {
   return (
     <div className={styles.navigationMenu}>
-      <Router href="/posts/create">
-        <GeneralButton>Create</GeneralButton>
-      </Router>
-      <Router href="/posts">
+      <Router path="/posts">
         <GeneralButton>Posts</GeneralButton>
       </Router>
-      <Router href="/gifts">
+      <Router path="/gifts">
         <GeneralButton>Gifts</GeneralButton>
       </Router>
-      <Router href="/About">
+      <Router path="/about">
         <GeneralButton>About</GeneralButton>
       </Router>
     </div>

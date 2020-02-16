@@ -13,7 +13,7 @@ const PreviewCard = ({article}) => {
         </div>
         <h2>{article.title}</h2>
         <p>{article.summary}</p>
-        <Router href={`/articles/:id`}>
+        <Router path='/article/[article]' asPath={`/article/${article.slug}`}>
           <FilledButton>Read post...</FilledButton>
         </Router>
       </div>

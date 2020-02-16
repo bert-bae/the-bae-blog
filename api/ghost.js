@@ -10,6 +10,11 @@ const getArticles = async () => {
   return await api.posts.browse({limit: "all"})
 }
 
+const getSingleArticle = async (postSlug) => {
+  return await api.posts.read({slug: postSlug})
+}
+
 export {
-  getArticles
+  getArticles,
+  getSingleArticle
 }

@@ -35,7 +35,8 @@
 
 @media only screen and (max-width: 568px) {
   .previewCard {
-    grid-template-columns: 1;
+    grid-template-columns: repeat(1, minmax(auto, 1fr));
     grid-template-rows: repeat(2, minmax(auto, 1fr));
+    grid-gap: 5px;
   }
 }

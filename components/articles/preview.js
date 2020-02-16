@@ -4,6 +4,7 @@ import styles from './articles.modules.scss'
 
 const ArticlePreview = (props) => {
   const articles = props.articles.map((article, i) => {
+    console.log(article)
     return <PreviewCard article={{...article, key: i}} key={i}/>
   })
   return (

@@ -2,33 +2,33 @@ import {useState, useEffect} from 'react'
 import DefaultHead from '../components/misc/default-head'
 import NavigationBar from '../components/navigation/navigation-bar.js'
 import Jumbotron from '../components/jumbotron/jumbotron'
-import ArticlePreview from '../components/articles/preview'
+import PostPreview from '../components/posts/preview'
 import NavigationFooter from '../components/navigation/navigation-footer'
-import { getArticles } from '../api/ghost';
+import { getPosts } from '../api/ghost';
 
-const Index = ({ initialArticles }) => {
+const Index = ({ initialPosts }) => {
   const [page, setPage] = useState("latest")
-  const [articles, setArticles] = useState([])
+  const [posts, setPosts] = useState([])
 
   useEffect(() => {
-    setArticles(initialArticles)
+    setPosts(initialPosts)
   }, [])
-  
+
   return (
     <>
       <DefaultHead/>
       <NavigationBar/>
       <Jumbotron/>
-      <ArticlePreview articles={articles}/>
-      <NavigationFooter page={page} setState={{setPage, setArticles}}/>
+      <PostPreview posts={posts}/>
+      <NavigationFooter page={page} setState={{setPage, setPosts}}/>
     </>
   )
 }
 
 Index.getInitialProps = async () => {
-  const articles = await getArticles();
-  console.log(articles)
-  return { initialArticles: articles }
+  const posts = await getPosts();
+  console.log(posts)
+  return { initialPosts: posts }
 }
 
 export default Index

@@ -6,15 +6,15 @@ const api = new GhostContentAPI({
   version: process.env.GHOST_VERSION
 })
 
-const getArticles = async () => {
+const getPosts = async () => {
   return await api.posts.browse({limit: "all"})
 }
 
-const getSingleArticle = async (postSlug) => {
+const getSinglePost = async (postSlug) => {
   return await api.posts.read({slug: postSlug})
 }
 
 export {
-  getArticles,
-  getSingleArticle
+  getPosts,
+  getSinglePost
 }

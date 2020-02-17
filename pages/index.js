@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react'
 import DefaultHead from '../components/misc/default-head'
 import NavigationBar from '../components/navigation/navigation-bar.js'
 import Jumbotron from '../components/jumbotron/jumbotron'
-import PostPreview from '../components/posts/preview'
+import PostPreview from '../components/preview/preview'
 import NavigationFooter from '../components/navigation/navigation-footer'
 import { getPosts } from '../api/ghost';
 

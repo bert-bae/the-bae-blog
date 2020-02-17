@@ -1,6 +1,6 @@
 import FilledButton from '../buttons/filled-button'
 import Router from '../misc/router'
-import styles from './posts.modules.scss'
+import styles from './preview.modules.scss'
 import moment from 'moment'
 
 const PreviewCard = ({post}) => {

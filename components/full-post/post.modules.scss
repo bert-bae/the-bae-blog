@@ -1,0 +1,31 @@
+.featureImage {
+  max-height: 350px;
+  width: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.icon {
+  height:25px;
+  width: 25px;
+}
+
+.postInfo {
+  width: 300px;
+}
+
+.postHeader {
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .postHeader {
+    font-size: 26px;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .postHeader {
+    font-size: 22px;
+  }
+}

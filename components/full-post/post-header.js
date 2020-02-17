@@ -1,14 +1,26 @@
+import PostContainer from '../containers/post-container'
+import AccessTimeIcon from '@material-ui/icons/AccessTime'
+import GridContainer from '../containers/grid-container'
 import moment from 'moment'
+import styles from './post.modules.scss'
 
 const PostHeader = ({post}) => {
   return (
-    <div>
-      <img src={post.feature_image}/>
-      <h1>{post.title}</h1>
-      <p>
-        <i><span>{moment(post.published_at).format('LL')}</span></i> | Reading time: {post.reading_time}min
-      </p>
-    </div>
+    <>
+      <img className={styles.featureImage} src={post.feature_image}/>
+      <PostContainer>
+        <h1 className={styles.postHeader}>{post.title}</h1>
+        <div className={styles.postInfo}>
+          <GridContainer
+            columns={2}
+            rows={1}
+          >
+            <p><i>{moment(post.published_at).format('LL')}</i></p>
+            <span><AccessTimeIcon fontSize="medium"/> {post.reading_time} min</span>
+          </GridContainer>
+        </div>
+      </PostContainer>
+    </>
   )
 }
 

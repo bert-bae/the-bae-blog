@@ -1,6 +1,6 @@
 import MainContainer from '../containers/main-container'
 import PreviewCard from './preview-card'
-import styles from './posts.modules.scss'
+import styles from './preview.modules.scss'
 
 const PostPreview = ({posts}) => {
   const postList = posts.map((post, i) => {

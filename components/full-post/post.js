@@ -6,8 +6,8 @@ import PostContainer from '../containers/post-container'
 const Post = ({post}) => {
   return (
     <MainContainer>
+      <PostHeader post={post}/>
       <PostContainer>
-        <PostHeader post={post}/>
         <PostHtml html={post.html}/>
       </PostContainer>
     </MainContainer>

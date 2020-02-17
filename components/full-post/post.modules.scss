@@ -18,6 +18,16 @@
   font-size: 30px;
 }
 
+.readTime {
+  background-color: #808080;
+  color: #FFF;
+  height: 25px;
+  width: fit-content;
+  padding: 0 5px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
 @media only screen and (max-width: 768px) {
   .postHeader {
     font-size: 26px;

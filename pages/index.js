@@ -12,6 +12,7 @@ const Index = ({ initialPosts }) => {
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     setPosts(initialPosts)
   }, [])
 

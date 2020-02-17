@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 import {getSinglePost} from '../../api/ghost'
 import Post from '../../components/full-post/post'
 import DefaultContainer from '../../components/misc/default-container'
@@ -6,6 +7,9 @@ import NavigationBar from '../../components/navigation/navigation-bar.js'
 
 const ViewPost = ({post}) => {
   console.log(post)
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <DefaultContainer>
       <DefaultHead/>

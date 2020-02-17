@@ -18,7 +18,9 @@ const getPosts = async (options = {}) => {
 
 const getSinglePost = async (postSlug) => {
   return await api.posts.read({
-    slug: postSlug
+    slug: postSlug,
+  }, {
+    include: 'tags,authors'
   })
 }
 

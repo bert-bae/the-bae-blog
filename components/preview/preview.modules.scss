@@ -1,12 +1,12 @@
 .preview {
-  height: 100%;
+  height: calc(100% - 55px);
   width: 100%;
 }
 
 .previewImage {
   height: 100%;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .previewCard {
@@ -19,17 +19,33 @@
 }
 
 .dateContainer {
-  margin: 10px 0 0 0;
   border-top: 5px solid rgba(128, 128, 128, 0.5);
 }
 
 .previewText {
   position: relative;
   padding: 0 0 55px 0;
-  button {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+}
+
+.previewFooter {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  p {
+    margin: 0;
+  }
+}
+
+.authorSection {
+  display: grid;
+  grid-template-columns: 35px 200px;
+  grid-gap: 5px;
+  align-items: center;
+  img {
+    border-radius: 50%;
   }
 }
 

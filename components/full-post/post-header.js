@@ -16,7 +16,7 @@ const PostHeader = ({post}) => {
             rows={1}
           >
             <p><i>{moment(post.published_at).format('LL')}</i></p>
-            <div className={styles.readTime}><AccessTimeIcon fontSize="medium"/> {post.reading_time} min</div>
+            <div className={styles.readTime}><AccessTimeIcon fontSize="inherit"/> {post.reading_time} min</div>
           </GridContainer>
         </div>
       </PostContainer>

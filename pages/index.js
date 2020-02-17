@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import DefaultContainer from '../components/misc/default-container'
 import DefaultHead from '../components/misc/default-head'
 import NavigationBar from '../components/navigation/navigation-bar.js'
 import Jumbotron from '../components/jumbotron/jumbotron'
@@ -15,13 +16,13 @@ const Index = ({ initialPosts }) => {
   }, [])
 
   return (
-    <>
+    <DefaultContainer>
       <DefaultHead/>
       <NavigationBar/>
       <Jumbotron/>
       <PostPreview posts={posts}/>
       <NavigationFooter page={page} setState={{setPage, setPosts}}/>
-    </>
+    </DefaultContainer>
   )
 }
 

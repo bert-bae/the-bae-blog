@@ -1,6 +1,13 @@
+import {useState} from 'react'
 import {BottomNavigation, BottomNavigationAction} from '@material-ui/core'
 import {withStyles} from '@material-ui/core/styles'
-import {NewReleasesTwoTone, GroupTwoTone, LocalFloristTwoTone, SentimentDissatisfiedTwoTone} from '@material-ui/icons'
+import {
+  NewReleasesTwoTone, 
+  GroupTwoTone, 
+  LocalFloristTwoTone, 
+  SentimentDissatisfiedTwoTone,
+  ArrowDropUp
+} from '@material-ui/icons'
 import {getPosts} from '../../api/ghost'
 import styles from './navigation-bar.modules.scss'
 
@@ -14,8 +21,16 @@ const StyledAction = withStyles(theme => ({
 }))(BottomNavigationAction);
 
 const NavigationFooter = ({page, setState}) => {
+  const [toggle, setToggle] = useState(false)
+  const onClick = () => {
+    setToggle(!toggle)
+  }
+
   return (
-    <div className={styles.navigationFooter}>
+    <div className={styles.navigationFooter} data-toggle={toggle}>
+      <div className={styles.toggler} onClick={onClick}>
+        <ArrowDropUp className={styles.toggleArrow}/>
+      </div>
       <BottomNavigation
         value={page}
         onChange={async (event, newValue) => {

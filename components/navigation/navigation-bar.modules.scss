@@ -1,8 +1,5 @@
 .fullBar {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  z-index: 1000;
   width: 100%;
   background-color: #FFF;
 }
@@ -23,4 +20,31 @@
   bottom: 0;
   width: 100%;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+  transform: translateY(56px);
+  transition: all 0.5s ease-in-out;
+  .toggler {
+    position: absolute;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    background-color: #FFF;
+    right: 10px;
+    top: -20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background-color: #D3D3D3;
+    }
+  }
+  &[data-toggle="true"] {
+    transform: translateY(0);
+    .toggleArrow {
+      transform: rotate(180deg);
+      transition: all 0.5s ease-in-out;
+    }
+  }
 }

@@ -1,7 +1,9 @@
 import PostHeader from './post-header'
+import PostAuthor from './post-author'
 import PostHtml from './post-html'
 import MainContainer from '../containers/main-container'
 import PostContainer from '../containers/post-container'
+
 
 const Post = ({post}) => {
   return (
@@ -9,6 +11,7 @@ const Post = ({post}) => {
       <PostHeader post={post}/>
       <PostContainer>
         <PostHtml html={post.html}/>
+        <PostAuthor post={post}/>
       </PostContainer>
     </MainContainer>
   )

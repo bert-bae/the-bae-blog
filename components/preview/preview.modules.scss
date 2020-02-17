@@ -1,3 +1,15 @@
+.previewAuthor {
+  display: grid;
+  grid-template-columns: 35px 200px;
+  grid-gap: 5px;
+  align-items: center;
+  img {
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+  }
+}
+
 .preview {
   height: calc(100% - 55px);
   width: 100%;
@@ -36,18 +48,6 @@
   align-items: center;
   p {
     margin: 0;
-  }
-}
-
-.authorSection {
-  display: grid;
-  grid-template-columns: 35px 200px;
-  grid-gap: 5px;
-  align-items: center;
-  img {
-    border-radius: 50%;
-    height: 35px;
-    width: 35px;
   }
 }
 

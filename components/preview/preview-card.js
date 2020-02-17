@@ -15,7 +15,7 @@ const PreviewCard = ({post}) => {
         <h2>{post.title}</h2>
         <p>{post.excerpt}...</p>
         <div className={styles.previewFooter}>
-          <div className={styles.authorSection}>
+          <div className={styles.previewAuthor}>
             <img src={post.authors[0].profile_image}/>
             <p><i>By {post.authors[0].name}</i></p>
           </div>

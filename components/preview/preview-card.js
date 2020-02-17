@@ -12,7 +12,7 @@ const PreviewCard = ({post}) => {
           <p><i>{moment(post.published_at).format('LL')}</i> | <span>Reading time: {post.reading_time}min</span></p>
         </div>
         <h2>{post.title}</h2>
-        <p>{post.summary}</p>
+        <p>{post.excerpt}...</p>
         <Router path='/posts/[post]' asPath={`/posts/${post.slug}`}>
           <FilledButton>Read post...</FilledButton>
         </Router>

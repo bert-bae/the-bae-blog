@@ -1,6 +1,7 @@
 import {BottomNavigation, BottomNavigationAction} from '@material-ui/core'
 import {withStyles} from '@material-ui/core/styles'
 import {NewReleasesTwoTone, GroupTwoTone, LocalFloristTwoTone, SentimentDissatisfiedTwoTone} from '@material-ui/icons'
+import {getPosts} from '../../api/ghost'
 
 const StyledAction = withStyles(theme => ({
   root: {
@@ -15,28 +16,9 @@ const NavigationFooter = ({page, setState}) => {
   return (
     <BottomNavigation
       value={page}
-      onChange={(event, newValue) => {
-        setState.setArticles([
-          // dummy data... this should come from posts
-          {
-            title: `Article Title ${newValue}`, 
-            summary: "Article summary blah blah blah blah blah", 
-            imgUrl: "/images/logo.png",
-            date: new Date().toDateString()
-          },
-          {
-            title: `Article Title ${newValue}`, 
-            summary: "Article summary blah blah blah blah blah", 
-            imgUrl: "/images/logo.png",
-            date: new Date().toDateString()
-          },
-          {
-            title: `Article Title ${newValue}`, 
-            summary: "Article summary blah blah blah blah blah", 
-            imgUrl: "/images/logo.png",
-            date: new Date().toDateString()
-          },
-        ])
+      onChange={async (event, newValue) => {
+        const posts = await getPosts({ filter: `tags:${newValue}`})
+        setState.setPosts(posts)
         setState.setPage(newValue)
       }}
       showLabels

@@ -6,12 +6,20 @@ const api = new GhostContentAPI({
   version: process.env.GHOST_VERSION
 })
 
-const getPosts = async () => {
-  return await api.posts.browse({limit: "all"})
+const getPosts = async (options = {}) => {
+  const defaultOptions = {
+    limit: options.limit || 'all',
+    include: options.include ? `${options.include},tags,authors'` : 'tags,authors',
+    order: options.order || 'published_at DESC',
+    filter: options.filter ? options.filter.replace(/\s/, '-') : null
+  }
+  return await api.posts.browse(defaultOptions)
 }
 
 const getSinglePost = async (postSlug) => {
-  return await api.posts.read({slug: postSlug})
+  return await api.posts.read({
+    slug: postSlug
+  })
 }
 
 export {

@@ -1,6 +1,6 @@
 import PostContainer from '../containers/post-container'
-import AccessTimeIcon from '@material-ui/icons/AccessTime'
 import GridContainer from '../containers/grid-container'
+import ReadTime from '../icons/read-time'
 import moment from 'moment'
 import styles from './post.modules.scss'
 
@@ -16,7 +16,7 @@ const PostHeader = ({post}) => {
             rows={1}
           >
             <p><i>{moment(post.published_at).format('LL')}</i></p>
-            <div className={styles.readTime}><AccessTimeIcon fontSize="inherit"/> {post.reading_time} min</div>
+            <ReadTime readTime={post.reading_time}/>
           </GridContainer>
         </div>
       </PostContainer>

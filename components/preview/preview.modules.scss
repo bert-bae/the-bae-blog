@@ -1,8 +1,11 @@
 .previewAuthor {
-  display: grid;
-  grid-template-columns: 35px 200px;
-  grid-gap: 5px;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  margin: 20px 0;
+  p {
+    margin: 0 0 3px 10px;
+  }
   img {
     border-radius: 50%;
     height: 35px;
@@ -10,11 +13,21 @@
   }
 }
 
-.preview {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(350px, 1fr));
-  grid-gap: 25px;
+.previewText {
+  position: relative;
+  padding: 0 0 55px 0;
+}
+
+.previewImage {
+  min-height: 350px;
+  min-width: 350px;
+  object-fit: cover;
+}
+
+.previewButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .previewCard {
@@ -22,13 +35,48 @@
   &[data-hover="true"] {
     .overlay {
       &:before {
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: rgba(0, 0, 0, 0.3);
       }
     }
-    .dateContainer {
+    .previewDate, .previewTime {
       opacity: 1;
     }
   }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.previewTime {
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  background-color: #FFF;
+  padding: 5px;
+  opacity: 0;
+}
+
+.previewDate {
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  z-index: 1;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background-color: #FFF;
+  padding: 5px;
+  p {
+    margin: 0
+  }
+}
+
+.preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 40px;
 }
 
 .overlay {
@@ -42,41 +90,5 @@
     width: 100%;
     content: '';
     background-color: rgba(0, 0, 0, 0.4);
-  }
-}
-
-.previewImage {
-  min-height: 350px;
-  min-width: 350px;
-  object-fit: cover;
-}
-
-.dateContainer {
-  transition: all 0.2s ease-in-out;
-  opacity: 0;
-  z-index: 1;
-  position: absolute;
-  top: 20px;
-  background-color: #FFF;
-  padding: 5px;
-  p {
-    margin: 0
-  }
-}
-
-.previewText {
-  position: relative;
-  padding: 0 0 55px 0;
-}
-
-.previewFooter {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  p {
-    margin: 0;
   }
 }

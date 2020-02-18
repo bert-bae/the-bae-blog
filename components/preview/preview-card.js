@@ -3,15 +3,23 @@ import Router from '../misc/router'
 import styles from './preview.modules.scss'
 import moment from 'moment'
 
-const PreviewCard = ({post}) => {
+const PreviewCard = ({post, hover, setHover}) => {
   console.log(post)
+
   return (
-    <div className={styles.previewCard} key={post.key}>
-      <img className={styles.previewImage} src={post.feature_image}/>
-      <div className={styles.previewText}>
+    <div className={styles.previewCard} 
+      data-hover={hover} 
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)} 
+      key={post.key}
+    >
+      <div className={styles.overlay}>
         <div className={styles.dateContainer}>
-          <p><i>{moment(post.published_at).format('LL')}</i> | <span>Reading time: {post.reading_time} min</span></p>
+          <p>{moment(post.published_at).format('LL')}</p>
         </div>
+        <img className={styles.previewImage} src={post.feature_image}/>
+      </div>
+      {/* <div className={styles.previewText}>
         <h2>{post.title}</h2>
         <p>{post.excerpt}...</p>
         <div className={styles.previewFooter}>
@@ -23,8 +31,9 @@ const PreviewCard = ({post}) => {
             <FilledButton>Read post...</FilledButton>
           </Router>
         </div>
-      </div>
+      </div> */}
     </div>
+    //  | <span>Reading time: {post.reading_time} min</span>
   )
 }
 

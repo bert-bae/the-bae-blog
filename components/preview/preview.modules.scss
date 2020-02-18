@@ -11,27 +11,57 @@
 }
 
 .preview {
-  height: calc(100% - 55px);
-  width: 100%;
-}
-
-.previewImage {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 25px;
 }
 
 .previewCard {
-  display: grid;
+  cursor: pointer;
+  &[data-hover="true"] {
+    .overlay {
+      &:before {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+    .dateContainer {
+      opacity: 1;
+    }
+  }
+}
+
+.overlay {
+  position: relative;
+  &:before {
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.previewImage {
   min-height: 350px;
-  grid-template-columns: 33% 1fr;
-  grid-template-rows: repeat(1, minmax(auto, 1fr));
-  grid-gap: 50px;
-  padding: 0 0 25px 0;
+  min-width: 350px;
+  object-fit: cover;
 }
 
 .dateContainer {
-  border-top: 5px solid rgba(128, 128, 128, 0.5);
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  z-index: 1;
+  position: absolute;
+  top: 20px;
+  background-color: #FFF;
+  padding: 5px;
+  p {
+    margin: 0
+  }
 }
 
 .previewText {
@@ -48,13 +78,5 @@
   align-items: center;
   p {
     margin: 0;
-  }
-}
-
-@media only screen and (max-width: 568px) {
-  .previewCard {
-    grid-template-columns: repeat(1, minmax(auto, 1fr));
-    grid-template-rows: repeat(2, minmax(auto, 1fr));
-    grid-gap: 5px;
   }
 }

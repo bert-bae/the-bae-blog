@@ -24,16 +24,8 @@
   object-fit: cover;
 }
 
-.previewButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .previewCard {
   cursor: pointer;
-  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
-  padding: 0 0 20px 0;
   &[data-hover="true"] {
     .overlay {
       &:before {

@@ -4,7 +4,7 @@ const PreviewSummary = ({summary}) => {
   return (
     <div 
       className={styles.previewSummary}>
-      <p>{summary}...</p>
+      <p>{summary}</p>
     </div>
   )
 }

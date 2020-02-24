@@ -7,7 +7,7 @@ import PostPreview from '../components/preview/preview'
 import NavigationFooter from '../components/navigation/navigation-footer'
 import { getPosts } from '../api/ghost';
 
-const Index = ({ initialPosts }) => {
+const Index = ({ initialPosts, highlightPosts }) => {
   const [page, setPage] = useState("latest")
   const [posts, setPosts] = useState([])
 
@@ -20,7 +20,7 @@ const Index = ({ initialPosts }) => {
     <DefaultContainer>
       <DefaultHead/>
       <NavigationBar/>
-      <Jumbotron/>
+      <Jumbotron highlights={highlightPosts}/>
       <PostPreview posts={posts}/>
       <NavigationFooter page={page} setState={{setPage, setPosts}}/>
     </DefaultContainer>
@@ -28,7 +28,11 @@ const Index = ({ initialPosts }) => {
 }
 
 Index.getInitialProps = async () => {
-  return { initialPosts: await getPosts() }
+  const filterBy = 'highlights'
+  return { 
+    initialPosts: await getPosts(),
+    highlightPosts: await getPosts({ filter: `tags:${filterBy}`} )
+  }
 }
 
 export default Index

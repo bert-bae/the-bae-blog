@@ -1,10 +1,11 @@
-import MainContainer from '../containers/main-container'
+import HighLights from './highlights'
+import Carousel from '../carousel/carousel'
 import styles from './jumbotron.modules.scss'
 
-const Jumbotron = () => {
+const Jumbotron = ({ highlights }) => {
   return (
     <div className={styles.jumbotronContainer}>
-      <img src="./images/jumbotron.jpg" className={styles.jumbotronImage}/>
+      <Carousel items={highlights}/>
     </div>
   )
 }

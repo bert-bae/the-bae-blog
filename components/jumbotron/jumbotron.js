@@ -5,7 +5,10 @@ import styles from './jumbotron.modules.scss'
 const Jumbotron = ({ highlights }) => {
   return (
     <div className={styles.jumbotronContainer}>
-      <Carousel items={highlights}/>
+      <Carousel 
+        items={highlights} 
+        showIndicator={true}
+      />
     </div>
   )
 }

@@ -1,7 +1,6 @@
 import styles from './carousel.modules.scss'
 
 const CarouselItem = ({ item }) => {
-  console.log(item)
   return (
     <div className={styles.carouselItem}>
       <img src={item.feature_image}/>

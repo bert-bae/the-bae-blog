@@ -1,13 +1,18 @@
+import {useState, useEffect} from 'react'
 import CarouselItem from './carousel-item'
+import CarouselIndicator from './carousel-indicator'
 import styles from './carousel.modules.scss'
 
-const Carousel = ({items}) => {
-  const itemMap = items.map((item, i) => {
-    return <CarouselItem item={item} key={i}/>
-  })
+const Carousel = ({items, showIndicator}) => {
+  const [active, setActive] = useState(0)
+
   return (
     <div className={styles.carousel}>
-      { items.length > 0 && itemMap }
+      <CarouselItem item={items[active]} />
+     {
+       showIndicator &&
+       <CarouselIndicator items={items} active={active} setActive={setActive}/>
+     }
     </div>
   )
 }

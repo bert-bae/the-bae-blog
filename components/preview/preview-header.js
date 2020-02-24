@@ -1,3 +1,4 @@
+import PreviewSummary from './preview-summary'
 import ReadTime from '../icons/read-time'
 import styles from './preview.modules.scss'
 import moment from 'moment'
@@ -12,6 +13,7 @@ const PreviewHeader = ({post}) => {
       <div className={styles.previewTime}>
         <ReadTime readTime={post.reading_time}/>
       </div>
+      <PreviewSummary summary={post.excerpt}/>
     </div>
   )
 }

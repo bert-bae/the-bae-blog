@@ -13,6 +13,18 @@
   }
 }
 
+.previewSummary {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 70px 20px 20px 20px;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+  color: #F8F8FF;
+}
+
 .previewText {
   position: relative;
   padding: 0 0 55px 0;
@@ -26,6 +38,7 @@
 
 .previewCard {
   cursor: pointer;
+  overflow: hidden;
   &[data-hover="true"] {
     .overlay {
       &:before {
@@ -39,6 +52,12 @@
 
   h2 {
     text-align: center;
+  }
+
+  &:hover {
+    .previewSummary {
+      transform: translateX(0);
+    }
   }
 }
 

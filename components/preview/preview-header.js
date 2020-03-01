@@ -5,11 +5,11 @@ import moment from 'moment'
 
 const PreviewHeader = ({post}) => {
   return (
-    <div className={styles.overlay}>
+    <div className={styles.previewImage} style={{ backgroundImage: `url(${post.feature_image})` }}>
       <div className={styles.previewDate}>
         <p>{moment(post.published_at).format('LL')}</p>
       </div>
-      <img className={styles.previewImage} src={post.feature_image}/>
+      {/* <img className={styles.previewImage} src={post.feature_image}/> */}
       <div className={styles.previewTime}>
         <ReadTime readTime={post.reading_time}/>
       </div>

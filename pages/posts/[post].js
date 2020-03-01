@@ -6,7 +6,6 @@ import DefaultHead from '../../components/misc/default-head'
 import NavigationBar from '../../components/navigation/navigation-bar.js'
 
 const ViewPost = ({post}) => {
-  console.log(post)
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -21,7 +20,6 @@ const ViewPost = ({post}) => {
 
 ViewPost.getInitialProps = async ({query}) => {
   const post = await getSinglePost(query.post)
-  console.log(post)
   return { post }
 }
 

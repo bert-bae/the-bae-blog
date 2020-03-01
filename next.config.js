@@ -1,9 +1,15 @@
 const dotenv = require('dotenv')
+const withPlugins  = require('next-compose-plugins')
 const withSass = require('@zeit/next-sass')
+const withCss = require('@zeit/next-css')
 const withFonts = require('nextjs-fonts')
 
 dotenv.config({ path: __dirname + '/.env' })
-module.exports = withSass(withFonts({
+module.exports = withPlugins([
+  withSass,
+  withCss,
+  withFonts
+],{
   cssModules: true,
   env: {
     GHOST_KEY: process.env.GHOST_KEY,
@@ -12,4 +18,4 @@ module.exports = withSass(withFonts({
     S3_BUCKET: process.env.S3_BUCKET
   },
   publicRuntimeConfig: false
-}))
+})

@@ -7,6 +7,20 @@ import styles from './carousel.modules.scss'
 const Carousel = ({items, showIndicator, key}) => {
   const [active, setActive] = useState(0)
 
+  useEffect(() => {
+    const featureLength = items.length - 1
+    let current = 0
+    const interval = window.setInterval(() => {
+      if (featureLength === current) {
+        current = 0
+      } else {
+        current += 1
+      }
+      setActive(current)
+    }, 10000)
+    return () => window.clearInterval(interval)
+  }, [])
+
   return (
     <div className={styles.carousel}>
       <TransitionFade set={active}>

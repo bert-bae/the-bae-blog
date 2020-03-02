@@ -10,7 +10,7 @@ const TransitionFade = (props) => {
       >
         {props.children}
       </CSSTransition>
-      <style jsv>{`
+      <style>{`
         .fade-enter {
           opacity: 0.01;
         }

@@ -1,24 +1,14 @@
-@keyframes expandIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .jumbotronContainer {
   position: relative;
   height: 500px;
   box-sizing: border-box;
   margin: 0 auto;
-  animation: expandIn 2s;
+  overflow: hidden;
   &:before {
     position: absolute;
     height: 100%;
     width: 100%;
     content: "";
-    background-image: linear-gradient(to bottom, transparent 95%, white);
     background-color: rgba(0, 0, 0, 0.1);
   }
 }

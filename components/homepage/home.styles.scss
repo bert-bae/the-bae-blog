@@ -1,0 +1,60 @@
+.homeImage {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.callToAction {
+  height: fit-content;
+  text-align: center;
+  h1 {
+    margin: 30px auto 50px auto;
+    font-size: 36px;
+    max-width: 992px;
+  }
+}
+
+.ctaVisual {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 1fr));
+  grid-gap: 50px;
+  margin-bottom: 25px;
+  img {
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+    &:nth-child(2) {
+      margin-top: 75px;
+    }
+  }
+}
+
+.catchPhraseOne {
+  max-width: 50%;
+  text-align: start;
+}
+
+@media only screen and (max-width: 768px) {
+  .callToAction {
+    h1 {
+      font-size: 32px;
+    }
+  }
+
+  .ctaVisual {
+    grid-gap: 25px;
+  }
+
+  .catchPhraseOne {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .callToAction {
+    h1 {
+      font-size: 28px;
+    }
+  }
+}

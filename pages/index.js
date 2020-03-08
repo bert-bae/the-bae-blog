@@ -5,6 +5,7 @@ import NavigationBar from '../components/navigation/navigation-bar.js'
 import Jumbotron from '../components/jumbotron/jumbotron'
 import NavigationFooter from '../components/navigation/navigation-footer'
 import HomeImage from '../components/homepage/home-image'
+import CallToAction from '../components/homepage/call-to-action'
 import { getPosts } from '../api/ghost';
 
 const Index = ({ initialPosts, highlightPosts }) => {
@@ -23,7 +24,7 @@ const Index = ({ initialPosts, highlightPosts }) => {
       <Jumbotron>
         <HomeImage/>
       </Jumbotron>
-      {/* <PostPreview posts={posts}/> */}
+      <CallToAction/>
       <NavigationFooter page={page} setState={{setPage, setPosts}}/>
     </DefaultContainer>
   )

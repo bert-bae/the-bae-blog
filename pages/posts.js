@@ -3,11 +3,12 @@ import DefaultContainer from '../components/misc/default-container'
 import DefaultHead from '../components/misc/default-head'
 import NavigationBar from '../components/navigation/navigation-bar.js'
 import Jumbotron from '../components/jumbotron/jumbotron'
+import PostPreview from '../components/preview/preview'
 import NavigationFooter from '../components/navigation/navigation-footer'
-import HomeImage from '../components/homepage/home-image'
+import Carousel from '../components/carousel/carousel'
 import { getPosts } from '../api/ghost';
 
-const Index = ({ initialPosts, highlightPosts }) => {
+const Posts = ({ initialPosts, highlightPosts }) => {
   const [page, setPage] = useState("latest")
   const [posts, setPosts] = useState([])
 
@@ -21,15 +22,18 @@ const Index = ({ initialPosts, highlightPosts }) => {
       <DefaultHead/>
       <NavigationBar/>
       <Jumbotron>
-        <HomeImage/>
+        <Carousel 
+          items={highlightPosts} 
+          showIndicator={true}
+        />
       </Jumbotron>
-      {/* <PostPreview posts={posts}/> */}
+      <PostPreview posts={posts}/>
       <NavigationFooter page={page} setState={{setPage, setPosts}}/>
     </DefaultContainer>
   )
 }
 
-Index.getInitialProps = async () => {
+Posts.getInitialProps = async () => {
   const filterBy = 'highlights'
   return { 
     initialPosts: await getPosts(),
@@ -37,4 +41,4 @@ Index.getInitialProps = async () => {
   }
 }
 
-export default Index
+export default Posts

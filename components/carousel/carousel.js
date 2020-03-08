@@ -9,7 +9,7 @@ const Carousel = ({items, showIndicator, key}) => {
 
   useEffect(() => {
     const featureLength = items.length - 1
-    let current = 0
+    let current = active
     const interval = window.setInterval(() => {
       if (featureLength === current) {
         current = 0

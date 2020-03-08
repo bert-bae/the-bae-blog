@@ -1,4 +1,5 @@
 import {CSSTransition, TransitionGroup} from 'react-transition-group'
+import styles from './transition.scss'
 
 const TransitionFade = (props) => {
   return (

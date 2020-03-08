@@ -6,13 +6,10 @@ const NavigationMenu = () => {
   return (
     <div className={styles.navigationMenu}>
       <Router path="/posts">
-        <GeneralButton>Posts</GeneralButton>
-      </Router>
-      <Router path="/gifts">
-        <GeneralButton>Gifts</GeneralButton>
+        <GeneralButton color="white">Posts</GeneralButton>
       </Router>
       <Router path="/about">
-        <GeneralButton>About</GeneralButton>
+        <GeneralButton color="white">About</GeneralButton>
       </Router>
     </div>
   )

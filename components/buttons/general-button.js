@@ -1,8 +1,14 @@
-import {Button} from '@material-ui/core'
+import {Button, withStyles} from '@material-ui/core'
 import styles from './button-styles.modules.scss'
 
+
 const GeneralButton = (props) => {
-  return <Button className={styles.generalButton} variant="outlined" color="default">{props.children}</Button>
+  const StyledButton = withStyles(theme => ({
+    root: {
+      color: props.color || 'default',
+    },
+  }))(Button);
+  return <StyledButton className={styles.generalButton}>{props.children}</StyledButton>
 }
 
 export default GeneralButton

@@ -2,7 +2,7 @@ import styles from './jumbotron.modules.scss'
 
 const Jumbotron = (props) => {
   return (
-    <div className={styles.jumbotronContainer}>
+    <div className={props.isHome ? styles.jumbotronHome : styles.jumbotronContainer}>
       {props.children}
     </div>
   )

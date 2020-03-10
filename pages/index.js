@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import DefaultContainer from '../components/misc/default-container'
 import DefaultHead from '../components/misc/default-head'
+import Carousel from '../components/carousel/carousel'
 import NavigationBar from '../components/navigation/navigation-bar.js'
 import Jumbotron from '../components/jumbotron/jumbotron'
 import NavigationFooter from '../components/navigation/navigation-footer'
@@ -21,10 +22,14 @@ const Index = ({ initialPosts, highlightPosts }) => {
     <DefaultContainer>
       <DefaultHead/>
       <NavigationBar/>
-      <Jumbotron>
+      <Jumbotron isHome={true}>
         <HomeImage/>
       </Jumbotron>
       <CallToAction/>
+      {/* <Carousel
+        transition="scroll">
+          <div>hello world</div>
+      </Carousel> */}
       <NavigationFooter page={page} setState={{setPage, setPosts}}/>
     </DefaultContainer>
   )

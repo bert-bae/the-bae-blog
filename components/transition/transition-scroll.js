@@ -6,9 +6,9 @@ const TransitionScroll = ({children}) => {
   const [position, setPosition] = useState(0)
   const childElements = children.map((comp, i) => {
     return (
-      <a id={`scroll-${i}`}>
+      <div id={`scroll-${i}`} key={`scroll-${i}`}>
         {comp}
-      </a>
+      </div>
     )
   })
 

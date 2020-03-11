@@ -4,11 +4,16 @@
   width: 100%;
 }
 
+.catchPhraseOne {
+  max-width: 50%;
+  text-align: start;
+}
+
 .callToAction {
   height: fit-content;
   text-align: center;
   h1 {
-    margin: 30px auto 50px auto;
+    margin: 50px auto 70px auto;
     font-size: 36px;
     max-width: 992px;
   }
@@ -29,9 +34,16 @@
   }
 }
 
-.catchPhraseOne {
-  max-width: 50%;
-  text-align: start;
+.homeHighlights {
+  width: 100%;
+  .highlight {
+    height: 600px;
+    width: 75vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -49,12 +61,26 @@
     max-width: 100%;
     text-align: center;
   }
+
+  .homeHighlights {
+    .highlight {
+      height: 450px;
+      width: 80vw;
+    }
+  }
 }
 
 @media only screen and (max-width: 568px) {
   .callToAction {
     h1 {
       font-size: 28px;
+    }
+  }
+
+  .homeHighlights {
+    .highlight {
+      height: 300px;
+      width: 85vw;
     }
   }
 }

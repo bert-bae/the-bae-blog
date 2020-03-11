@@ -2,14 +2,14 @@ import GeneralButton from '../../buttons/general-button'
 import Router from '../../misc/router'
 import styles from './navigation-menu.modules.scss'
 
-const NavigationMenu = () => {
+const NavigationMenu = ({color}) => {
   return (
     <div className={styles.navigationMenu}>
       <Router path="/posts">
-        <GeneralButton color="white">Posts</GeneralButton>
+        <GeneralButton color={color}>Posts</GeneralButton>
       </Router>
       <Router path="/about">
-        <GeneralButton color="white">About</GeneralButton>
+        <GeneralButton color={color}>About</GeneralButton>
       </Router>
     </div>
   )

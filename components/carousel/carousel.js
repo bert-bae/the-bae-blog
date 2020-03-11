@@ -7,7 +7,7 @@ const Carousel = ({setGet, showIndicator, indicatorLength, transition, children}
   return (
     <div className={styles.carousel}>
       { transition === 'fade' && 
-        <TransitionFade set={setGet.active}>
+        <TransitionFade position={setGet.get}>
           {children}
         </TransitionFade>
       }

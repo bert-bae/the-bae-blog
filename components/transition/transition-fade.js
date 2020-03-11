@@ -1,15 +1,15 @@
 import {CSSTransition, TransitionGroup} from 'react-transition-group'
-import './transition.modules.scss'
 
-const TransitionFade = (props) => {
+const TransitionFade = ({position, children}) => {
+
   return (
     <TransitionGroup style={{ height: '100%'}}>
       <CSSTransition
-        key={props.set}
-        className="fade"
-        timeout={{enter: 500, exit: 300}}
+        key={position}
+        classNames="fade"
+        timeout={{enter: 600, exit: 300}}
       >
-        {props.children}
+        {children}
       </CSSTransition>
       <style>{`
         .fade-enter {

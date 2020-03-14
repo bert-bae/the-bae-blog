@@ -5,7 +5,6 @@ import PreviewAuthor from './preview-author'
 import styles from './preview.modules.scss'
 
 const PreviewLarge = ({post}) => {
-  console.log(post)
   return (
     <Fade>
       <Router path='/posts/[post]' asPath={`/posts/${post.slug}`}>

@@ -31,11 +31,11 @@ const NavigationFooter = ({page, setState}) => {
       <div className={styles.toggler} onClick={onClick}>
         <ArrowDropUp className={styles.toggleArrow}/>
       </div>
-      <BottomNavigation
+      {/* <BottomNavigation
         value={page}
         onChange={async (event, newValue) => {
           const filter = newValue !== 'latest' ? `tags:${newValue}` : null
-          const posts = await getPosts({ filter })
+          const posts = await getPosts()
           setState.setPosts(posts)
           setState.setPage(newValue)
         }}
@@ -53,7 +53,7 @@ const NavigationFooter = ({page, setState}) => {
         <StyledAction label="Handling conflicts" value="handling conflicts"
           icon={<SentimentDissatisfiedTwoTone/>}
         />
-      </BottomNavigation>
+      </BottomNavigation> */}
     </div>
   )
 }

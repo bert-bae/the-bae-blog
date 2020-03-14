@@ -7,7 +7,7 @@ import styles from './home.styles.scss'
 const HomeMainHighlights = () => {
   return (
     <div className={styles.homeHighlights}>
-      <Zoom>
+      <Zoom delay={300}>
         <Carousel transition="scroll">
           <Router path="/product/planters">
             <CarouselItem>

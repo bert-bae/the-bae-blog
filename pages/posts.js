@@ -9,11 +9,10 @@ import Carousel from '../components/carousel/carousel'
 import PreviewCarouselItem from '../components/preview/preview-carousel-item'
 import { getPosts, getFeaturePosts } from '../api/ghost';
 
-const Posts = ({ initialPosts, highlightPosts, featurePosts }) => {
+const Posts = ({ initialPosts, highlightPosts }) => {
   const [page, setPage] = useState("latest")
   const [posts, setPosts] = useState([])
   const [active, setActive] = useState(0)
-
   useEffect(() => {
     window.scrollTo(0, 0)
 
@@ -46,7 +45,7 @@ const Posts = ({ initialPosts, highlightPosts, featurePosts }) => {
           <PreviewCarouselItem preview={highlightPosts[active]}/>
         </Carousel>
       </Jumbotron>
-      <PostPreview posts={posts} featurePosts={featurePosts}/>
+      <PostPreview posts={posts}/>
       <NavigationFooter page={page} setState={{ setPage, setPosts }} />
     </DefaultContainer>
   )
@@ -54,9 +53,8 @@ const Posts = ({ initialPosts, highlightPosts, featurePosts }) => {
 
 Posts.getInitialProps = async () => {
   return {
-    initialPosts: await getPosts({ filter: 'featured:false'}),
-    highlightPosts: await getFeaturePosts(3),
-    featurePosts: await getFeaturePosts(),
+    initialPosts: await getPosts(),
+    highlightPosts: await getFeaturePosts(3)
   }
 }
 

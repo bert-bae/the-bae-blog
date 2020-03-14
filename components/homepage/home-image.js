@@ -1,7 +1,7 @@
 import styles from './home.styles.scss'
 
 const HomeImage = () => {
-  return <img className={styles.homeImage} src={`${process.env.S3_BUCKET}/images/jumbotron.jpg`}/>
+  return <img className={styles.homeImage} src={`/images/growth.png`}/>
 }
 
 export default HomeImage

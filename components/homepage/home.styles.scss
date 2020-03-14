@@ -1,12 +1,7 @@
 .homeImage {
   object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
-
-.catchPhraseOne {
-  max-width: 50%;
-  text-align: start;
+  height: 100vh;
+  width: 100vw;
 }
 
 .callToAction {
@@ -22,15 +17,18 @@
 .ctaVisual {
   display: grid;
   grid-template-columns: repeat(2, minmax(auto, 1fr));
+  justify-items: center;
+  align-items: center;
   grid-gap: 50px;
   margin-bottom: 25px;
+  p {
+    font-size: 26px;
+    max-width: 350px;
+  }
   img {
     object-fit: cover;
     height: auto;
     width: 100%;
-    &:nth-child(2) {
-      margin-top: 75px;
-    }
   }
 }
 
@@ -50,6 +48,9 @@
   .callToAction {
     h1 {
       font-size: 32px;
+    }
+    p {
+      font-size: 22px;
     }
   }
 
@@ -74,6 +75,9 @@
   .callToAction {
     h1 {
       font-size: 28px;
+    }
+    p {
+      font-size: 18px;
     }
   }
 

@@ -36,7 +36,7 @@
   width: 100%;
   .highlight {
     height: 600px;
-    width: 75vw;
+    width: 55vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -78,6 +78,17 @@
     }
     p {
       font-size: 18px;
+    }
+  }
+
+  .ctaVisual {
+    grid-template-columns: repeat(1, minmax(auto, 1fr));
+    grid-template-rows: repeat(2, minmax(fit-content, 1fr));
+    img {
+      order: 1;
+    }
+    p {
+      order: 2;
     }
   }
 

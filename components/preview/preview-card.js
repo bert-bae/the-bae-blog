@@ -10,7 +10,6 @@ const PreviewCard = ({post, hover, setHover}) => {
         data-hover={hover} 
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)} 
-        key={post.key}
       >
         <PreviewHeader post={post}/>
         <PreviewFooter post={post}/>

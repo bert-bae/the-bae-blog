@@ -1,8 +1,7 @@
-import './casper-theme/global.css'
-import './casper-theme/screen.css'
+import styles from './post.modules.scss'
 
 const PostHtml = ({html}) => {
-  return <section dangerouslySetInnerHTML={{ __html: html }} />
+  return <section className={styles.postTheme} dangerouslySetInnerHTML={{ __html: html }} />
 }
 
 export default PostHtml

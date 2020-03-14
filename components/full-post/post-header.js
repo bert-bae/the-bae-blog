@@ -6,7 +6,7 @@ import styles from './post.modules.scss'
 
 const PostHeader = ({post}) => {
   return (
-    <>
+    <div className={styles.postFeature}>
       <img className={styles.featureImage} src={post.feature_image}/>
       <PostContainer>
         <h1 className={styles.postHeader}>{post.title}</h1>
@@ -14,13 +14,14 @@ const PostHeader = ({post}) => {
           <GridContainer
             columns={2}
             rows={1}
+            alignItems="center"
           >
-            <p><i>{moment(post.published_at).format('LL')}</i></p>
+            <span><i>{moment(post.published_at).format('LL')}</i></span>
             <ReadTime readTime={post.reading_time}/>
           </GridContainer>
         </div>
       </PostContainer>
-    </>
+    </div>
   )
 }
 

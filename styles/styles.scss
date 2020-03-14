@@ -19,12 +19,20 @@
   font-weight: normal; 
 }
 
-* {
-  font-family: Didot-Bold;
-}
-
 body {
   padding: 0;
   margin: 0 auto;
   width: 100%;
+}
+
+h1, h2, h3 {
+  font-family: Didot-Bold!important;
+}
+
+h4, h5, h6 {
+  font-family: Didot-Med!important;
+}
+
+p, a, span {
+  font-family: Didot-light!important;
 }

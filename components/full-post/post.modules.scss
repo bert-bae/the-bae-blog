@@ -31,6 +31,10 @@
 
 .postInfo {
   width: 300px;
+  .postAuthor {
+    justify-content: flex-start;
+    margin: 0;
+  }
 }
 
 .postHeader {

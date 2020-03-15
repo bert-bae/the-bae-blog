@@ -95,9 +95,9 @@
 
 .previewLarge {
   display: grid;
-  grid-template-columns: 40% 1fr;
+  grid-template-columns: 60% 1fr;
   grid-template-rows: repeat(1, minmax(350px, 1fr));
-  margin-bottom: 40px;
+  margin: 25px 0;
   grid-gap: 40px;
   width: 100%;
   position: relative;
@@ -107,7 +107,6 @@
     object-fit: cover;
   }
   .previewDetails {
-    border-top: 2px solid rgba(0, 0, 0, 0.2);
     padding: 25px 25px 50px 25px;
     .header {
       display: flex;
@@ -197,6 +196,10 @@
   font-size: 20px;
 }
 
+.sectionHeader {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
 
 @media only screen and (max-width: 768px) {
   .previewLarge {
@@ -204,7 +207,6 @@
     grid-template-rows: repeat(fit-content, minmax(350px, 1fr));
     .previewDetails {
       padding: 15px 15px 50px 15px;
-      border-top: none;
       .header {
         display: flex;
         align-items: center;

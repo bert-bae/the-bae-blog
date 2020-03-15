@@ -1,5 +1,6 @@
 import PostContainer from '../containers/post-container'
 import GridContainer from '../containers/grid-container'
+import PostAuthor from './post-author'
 import ReadTime from '../icons/read-time'
 import moment from 'moment'
 import styles from './post.modules.scss'
@@ -14,9 +15,9 @@ const PostHeader = ({post}) => {
           <GridContainer
             columns={2}
             rows={1}
-            alignItems="center"
+            alignItems="end"
           >
-            <span><i>{moment(post.published_at).format('LL')}</i></span>
+            <PostAuthor post={post} showDetail={true}/>
             <ReadTime readTime={post.reading_time}/>
           </GridContainer>
         </div>

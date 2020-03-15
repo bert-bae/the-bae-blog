@@ -22,7 +22,7 @@ const PostPreview = ({posts}) => {
 
     if (section === 'featured') {
       postSections.unshift(<>
-        <h1>{upperFirstLetter(section, ' ', ' ')}</h1>
+        <h1 className={styles.sectionHeader}>{upperFirstLetter(section, ' ', ' ')}</h1>
         { postList[0] }
         <div className={styles.previewRegular}>
           { subSections && subSections }
@@ -31,7 +31,7 @@ const PostPreview = ({posts}) => {
     } else {
       postSections.push(
         <>
-          <h1>{upperFirstLetter(section, ' ', ' ')}</h1>
+          <h1 className={styles.sectionHeader}>{upperFirstLetter(section, ' ', ' ')}</h1>
           { postList[0] }
           <div className={styles.previewRegular}>
             { subSections && subSections}

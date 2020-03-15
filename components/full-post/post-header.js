@@ -1,8 +1,8 @@
 import PostContainer from '../containers/post-container'
 import GridContainer from '../containers/grid-container'
 import PostAuthor from './post-author'
+import PostTags from './post-tags'
 import ReadTime from '../icons/read-time'
-import moment from 'moment'
 import styles from './post.modules.scss'
 
 const PostHeader = ({post}) => {
@@ -10,6 +10,7 @@ const PostHeader = ({post}) => {
     <div className={styles.postFeature}>
       <img className={styles.featureImage} src={post.feature_image}/>
       <PostContainer>
+        <PostTags tags={post.tags}/>
         <h1 className={styles.postHeader}>{post.title}</h1>
         <div className={styles.postInfo}>
           <GridContainer

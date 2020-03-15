@@ -59,6 +59,16 @@
   }
 }
 
+.tagWrapper {
+  display: flex;
+  flex-flow: row-wrap;
+  width: 100%;
+  max-width: 400px;
+  div {
+    margin: 5px 5px 0 0;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .postHeader {
     font-size: 26px;
